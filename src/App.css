@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  border: 1px solid #000;
+}
