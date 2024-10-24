@@ -10,9 +10,109 @@ body {
   font-family: sans-serif;
 }
 
-
+/* Container for the game */
 .container {
-  max-width: 1000px;
-  margin-inline: auto;
-  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+/* Main game div */
+.memoryGameDiv {
+  text-align: center;
+}
+
+.memoryGameDiv h1 {
+  margin-bottom: 20px;
+}
+
+/* Input section styling */
+.gridInputDiv {
+  margin-bottom: 20px;
+}
+
+.gridInputDiv input {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Cards grid */
+.cardsDiv {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Card styling */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ccc;
+  color: transparent;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Styles for flipped cards */
+.flipped {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Styles for solved cards */
+.solved {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Styles for hidden cards (not flipped yet) */
+.hidden {
+  background-color: #6c757d;
+  color: transparent;
+}
+
+/* Victory message */
+.wonMessage {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #28a745;
+  animation: bounce 1s infinite;
+}
+
+.resetBtn {
+  background-color:#28a745;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Animation for the victory message */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
